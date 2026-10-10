@@ -12,31 +12,39 @@ namespace BlaisePascal.EnemyOrPlayer.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Player player = new Player("Mario", 1, 0, 100, 100, true, 0);
-            Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
+            try
+            {
+                Player player = new Player("Mario", 1, 0, 100, 100, true, 0);
+                Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
 
-            player.TakeDamage(30);
+                player.TakeDamage(30);
 
-            Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
+                Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
 
-            player.AddExperience(150);
+                player.AddExperience(150);  
 
-            Console.WriteLine($"Esperienza dopo l'aggiunta: {player.Experience}");
+                Console.WriteLine($"Esperienza dopo l'aggiunta: {player.Experience}");
 
-            player.AddGold(50);
-            Console.WriteLine($"Oro del giocatore: {player.Gold}");
+                player.AddGold(50);
+                Console.WriteLine($"Oro del giocatore: {player.Gold}");
 
-            player.TakeDamage(30);
+                player.TakeDamage(30);
 
-            player.AddHealth(20);
+                player.AddHealth(20);
 
-            player.TakeDamage(100);
+                player.TakeDamage(100);
 
-            Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
+                Console.WriteLine($"Il giocatore è vivo? {player.IsAlive}");
 
-            player.ResetHealth();
+                player.ResetHealth();
 
-            player.ResetExperience();
+                player.ResetExperience();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($" { ex.Message}");
+                   
+            }
         }
 
 

@@ -16,7 +16,7 @@ namespace Giocatore.domain
         int _health;
         int _maxHealth;
         bool _isAlive;
-        int gold;
+        int _gold;
 
         public string Name { get; set; }
         public int Level
@@ -45,6 +45,7 @@ namespace Giocatore.domain
                 {
                     throw new ArgumentOutOfRangeException("Experience cannot be negative.");
                 }
+                _experience = value;
             }
         }
         public int Health { get; private set; }
@@ -68,26 +69,13 @@ namespace Giocatore.domain
                 }
             }
         }
-        public bool IsAlive {
-            get
-            {
-                return _isAlive;
-            } private set
-            {
-                if (Health < 0)
-                {
-                    IsAlive = false;
-                } else
-                {
-                    IsAlive = true;
-                }
-            }
-        }
+        public bool IsAlive { get; private set; }
+
         public int Gold
         {
             get
             {
-                return gold;
+                return _gold;
             }
             private set
             {
@@ -172,6 +160,4 @@ namespace Giocatore.domain
             Health = MaxHealth;
         }
     }
-
-
 }

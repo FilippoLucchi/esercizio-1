@@ -1,8 +1,10 @@
 <Solution>
   <Folder Name="/doc/" />
   <Folder Name="/src/">
-    <Project Path="BlaisePascal.EnemyOrPlayer.Console/BlaisePascal.EnemyOrPlayer.Console.csproj" />
-    <Project Path="Player/Player.domain.csproj" />
+    <Project Path="BlaisePascal.EnemyOrPlayer.Console/BlaisePascal.EnemyOrPlayer.ConsoleApp.csproj" Id="9ee79d96-c054-47c7-a5b9-bcfde6463b1b" />
+    <Project Path="Player/Giocatore.domain.csproj" Id="d9a8c9bf-5575-4a09-8abc-93475dcbb35b" />
   </Folder>
-  <Folder Name="/test/" />
+  <Folder Name="/test/">
+    <Project Path="test/BlaisePascal.PlayerTest/BlaisePascal.PlayerTest.csproj" Id="115549cd-2ec1-40d6-b7f8-2e25a2308dcf" />
+  </Folder>
 </Solution>
