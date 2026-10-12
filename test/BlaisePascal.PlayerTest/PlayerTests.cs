@@ -123,7 +123,7 @@ namespace BlaisePascal.PlayerTest;
         Assert.Throws<ArgumentOutOfRangeException>(() => player.AddGold(-1));
     }
 
-    public void MaxHealthCannotBeLessThanHealth()
+    public void MaxHealthCAnnotBeMoreThanHealth()
     {
         Player player = new Player("TestPlayer", 1, 0, 101, 100, true, 0);
         Assert.Throws<ArgumentOutOfRangeException>(() => new Player("TestPlayer", 1, 0, 101, 100, true, 0));
